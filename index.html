@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" style="background: #333;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Demand Video Production</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <a href="#home" class="logo"><img src="Images/Cineworks Logo.png" alt="Logo"></a>
+            <ul class="nav-links">
+                <li><a href="portfolio.html">How We Work</a></li>
+                <li><a href="#contact" class="cta-button">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <video autoplay loop muted class="hero-video">
+            <source src="Videos/Cineworks Hero Reel.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>On-Demand Video Production Company Worldwide</h1>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="container">
+            <h2>Cineworks sets the industry standard for performance video marketing.</h2>
+            <div class="video-container">
+                <video id="aboutUsVideo" width="640" height="360" controls poster="Images/thumbnail.png">
+                    <source src="Videos/Cineworks Hero Reel.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="watchReelBtn" onclick="togglePlayFullScreen()">Watch Reel</button>
+            </div>
+            <p>Cineworks offers on-demand video production services, from ideation to the final delivery, backed by our industry leading platform and methodology that's tailored to each project's needs.</p>
+        </div>
+    </section>
+    <!-- Get Started Call To Action -->
+    <section class="get-started">
+        <div class="container">
+            <div class="get-started-content">
+
+                <h3>Ready to Start Your Project?</h3>
+                <p>Join us at Cineworks and bring your vision to life. Schedule your shoot today!</p>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional sections will go here -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <a href="#contact" class="cta-button">Get Started</a>
+                    <li class="portfolio-link"><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+                <p>123 Street Name, City</p>
+                <p>(123) 456-7890</p>
+                <p>email@example.com</p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <p>
+                    <!-- Social media icons -->
+                    <a href="https://facebook.com" target="_blank">Facebook</a> |
+                    <a href="https://twitter.com" target="_blank">Twitter</a> |
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Popup Modal -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Get Started</h2>
+            <form id="inquiryForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="appointment">Choose a time:</label>
+                <!-- Calendar input (basic HTML input type="date" used for simplicity) -->
+                <input type="date" id="appointment" name="appointment" min="2023-01-01" max="2024-12-31" required>
+
+                <label for="inquiry">Detailed Inquiry:</label>
+                <textarea id="inquiry" name="inquiry"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

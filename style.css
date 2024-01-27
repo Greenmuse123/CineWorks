@@ -1,0 +1,472 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0); /* the javascript overrides this */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+
+.logo img {
+    height: 25px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-weight: bold;
+}
+
+    .nav-links li {
+        padding: 0 15px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+        .nav-links a:hover {
+            color: #000000;
+        }
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* This line removes the underline */
+    font-weight: bold;
+}
+
+
+    .cta-button:hover {
+        background-image: linear-gradient(to right, white 50%, #000 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        color: black;
+        border-color: black;
+        animation: slideBG 0.4s linear forwards;
+    }
+
+@keyframes slideBG {
+    from {
+        background-position: right bottom;
+    }
+
+    to {
+        background-position: left bottom;
+    }
+}
+
+
+
+/* Hero section styles */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+    .hero-content h1 {
+        margin-bottom: 20px;
+        font-size: 2.5em;
+    }
+.about-us {
+    background-color: #f8f8f8; /* Or any color that suits your design#1d1d1f */
+    padding: 10px 0;
+    text-align: center;
+}
+
+    .about-us .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .about-us h2 {
+        font-family: 'Proxima Nova', Sans-serif; /* Example font */
+        color: #333; /* Dark grey color */
+        margin-bottom: 1rem;
+        font-size: 3.5rem; /* Slightly larger font size */
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.1); /* Subtle text shadow */
+        text-align: center; /* Center-align the text */
+        padding-top: 50px;
+    }
+
+    .about-us p {
+        font-family: 'Proxima Nova', Sans-serif /* Matching font for consistency */
+        color: #666; /* Lighter grey color */
+        margin-top: 1rem; /* Spacing above the paragraph */
+        font-size: 1.5rem; /* Standard font size */
+        line-height: 1.4; /* Increase line height for readability */
+        max-width: 650px; /* Max width for optimal reading length */
+        margin-left: auto; /* Center the paragraph with auto margins */
+        margin-right: auto;
+        text-align: center; /* Center-align the text */
+    }
+
+
+    .about-us .video-container {
+        position: relative;
+        max-width: 750px;
+        margin: 0 auto;
+
+    }
+
+    .about-us video {
+        width: 100%;
+        height: auto;
+        border: 5px solid black;
+        
+    }
+
+.video-container button#watchReelBtn {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-weight: bold;
+}
+
+    .about-us button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+        .about-us button:hover {
+            background-color: #333;
+        }
+
+.get-started {
+    background-image: url('Images/start your project.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 46px; /* Increased padding inside the card */
+    text-align: center; /* Centered text */
+    max-width: 500px; /* Maximum width of the card */
+    min-height: 550px; /* Minimum height of the card */
+    margin: 30px auto; /* Adjusted centering of the card with margin */
+}
+
+
+.get-started-content {
+    padding: 0px; /* Increased padding for content */
+}
+
+    .get-started-content h3 {
+        margin-bottom: 15px; /* Adjusted spacing between heading and text */
+        font-size: 60px;
+    }
+
+    .get-started-content p {
+        margin-bottom: 25px; /* Adjusted spacing between text and button */
+        font-size: 2.5em;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        border-radius: 15px;
+    }
+    .get-started-content h3, .get-started-content p {
+        color: #FFFFFF; /* White text */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Black shadow for contrast */
+        /* Your existing styles here */
+    }
+
+
+.get-started .cta-button {
+    background-color: black; /* Primary color for the button */
+    color: white;
+    padding: 15px 25px; /* Increased padding for a larger button */
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners for the button */
+    transition: background-color 0.3s;
+}
+
+    .get-started .cta-button:hover {
+        color: black;
+    }
+
+
+footer {
+    background-color: #161617;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    font-family: 'Proxima Nova', sans-serif;
+    border-top: 2px solid #444;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Adjusted for better spacing */
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto; /* Centering the container */
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+    /* Quick Links specific styling */
+    .footer-column.quick-links {
+        margin-right: auto; /* Pushes the element to the left */
+    }
+
+    /* Follow Me specific styling */
+    .footer-column.follow-me {
+        margin-left: auto; /* Pushes the element to the right */
+    }
+ 
+
+    .footer-column h3 {
+        margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+.portfolio-link{
+    margin-top: 15px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+            .footer-column ul li a:hover {
+                color: black;
+            }
+
+    .footer-column p, .footer-column p a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .footer-column p a:hover {
+            color: #dddddd;
+        }
+
+
+/* Popup Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    top: -20%;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* Style the input fields and submit button */
+.modal-content input[type=text],
+.modal-content input[type=tel],
+.modal-content input[type=email],
+.modal-content input[type=date],
+.modal-content textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-content input[type=submit] {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .modal-content input[type=submit]:hover {
+        background-color: #555;
+    }
+/* Additional responsive adjustments can be added as necessary */
+
+
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 20px;
+    z-index: 1002; /* Ensure it's above other content */
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default */
+        position: absolute;
+        right: 0;
+        top: 50px; /* Positioned below the hamburger */
+        background-color: none; /* Background color of dropdown */
+        width: 100%; /* Full width dropdown */
+        z-index: 1001; /* Below the hamburger icon */
+    }
+
+        .nav-links li {
+            padding: 10px 15px;
+            text-align: right; /* Align links to the right */
+        }
+
+            .nav-links li:last-child {
+                border-bottom: none; /* Remove border for the last item */
+            }
+        .nav-links a {
+            
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+            .nav-links a:hover {
+                color: #0066cc; /* Highlight color on hover */
+            }
+
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    .about-us .container, .get-started .container {
+        padding: 0 10px;
+    }
+
+    .about-us h2, .get-started-content h3 {
+        font-size: 2em;
+    }
+
+    .about-us p, .get-started-content p {
+        font-size: 1em;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+   
+@media (max-width: 480px) {
+    .hamburger {
+        top: 5px;
+        right: 15px;
+    }
+
+    .nav-links {
+        top: 40px; /* Adjust if needed */
+    }
+
+    .about-us h2, .get-started-content h3 {
+        font-size: 1.5em;
+    }
+
+}
+

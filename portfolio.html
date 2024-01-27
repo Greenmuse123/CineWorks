@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineworks Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portStyles.css">
+    <script src="script.js"></script>
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Slick Slider Theme (optional) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <a href="index.html" class="logo"><img src="Images/Cineworks Logo.png" alt="Logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#contact" class="cta-button">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Image Section -->
+        <section class="hero-section">
+            <img src="Images/Portfolio Hero.jpg" alt="Descriptive Text for Image" class="hero-image">
+            <div class="hero-content">
+                <h1>Make Your Dreams a Reality</h1>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2>How We Work</h2>
+                <p>Our process ensures your videos tell a story as unique as your brand.</p>
+                <div class="steps-container">
+                    <!-- Step 1 Container -->
+                    <div class="step-container">
+                        <div class="step">
+                            <h3>Pre-Production</h3>
+                            <p>Conceptualize your idea with our creative team to outline your project. Lorem ipsum dolor sit amet. Et velit beatae et eaque eveniet ea veniam quas aut nihil ipsum. Ut mollitia expedita est dolor sint qui minus dolorem qui illo dolores ut labore iste. Et laboriosam optio quo dignissimos quisquam id ipsam possimus quo vero voluptates non adipisci numquam non voluptatibus modi et deserunt sunt!</p>
+                        </div>
+                        <img src="Images/Step1.jpg" alt="Step 1 Icon" class="step-image">
+                    </div>
+
+                    <!-- Step 2 Container -->
+                    <div class="step-container">
+                        <div class="step">
+                            <h3>Production</h3>
+                            <p>Bring your story to life with our state-of-the-art production techniques. Lorem ipsum dolor sit amet. Et velit beatae et eaque eveniet ea veniam quas aut nihil ipsum. Ut mollitia expedita est dolor sint qui minus dolorem qui illo dolores ut labore iste. Et laboriosam optio quo dignissimos quisquam id ipsam possimus quo vero voluptates non adipisci numquam non voluptatibus modi et deserunt sunt!</p>
+                        </div>
+                        <img src="Images/Step2.jpg" alt="Step 2 Icon" class="step-image">
+                    </div>
+
+                    <!-- Step 3 Container -->
+                    <div class="step-container">
+                        <div class="step">
+                            <h3>Post-Production</h3>
+                            <p>Edit and polish your video with our post-production expertise. Lorem ipsum dolor sit amet. Et velit beatae et eaque eveniet ea veniam quas aut nihil ipsum. Ut mollitia expedita est dolor sint qui minus dolorem qui illo dolores ut labore iste. Et laboriosam optio quo dignissimos quisquam id ipsam possimus quo vero voluptates non adipisci numquam non voluptatibus modi et deserunt sunt!</p>
+                        </div>
+                        <img src="Images/Step3.jpg" alt="Step 3 Icon" class="step-image">
+                    </div>
+                    <!-- Get Started Button -->
+                    <div class="get-started-button-container">
+                        <a href="#contact" class="cta-button">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio">
+            <div class="container">
+                <h2>Our Portfolio</h2>
+                <p>Explore our diverse projects and see how we bring stories to life.</p>
+
+                <!-- Portfolio gallery -->
+                <div class="portfolio-gallery">
+                    <!-- Portfolio item 1 -->
+                    <div class="portfolio-item">
+                        <video controls poster="Images/thumbnail.png">
+                            <source src="Videos/Cineworks Hero Reel.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Project Title</h3>
+                        <p>Short description of the project.</p>
+                    </div>
+
+                    <!-- Add more portfolio items (videos/images) as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer Container -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#contact" class="cta-button modal-trigger">Get Started</a></li>
+                    <li>
+                    <li class="portfolio-link"><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+                <p>123 Street Name, City</p>
+                <p>(123) 456-7890</p>
+                <p>email@example.com</p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <p>
+                    <!-- Social media icons -->
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Popup Modal -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Get Started</h2>
+            <form id="inquiryForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="appointment">Choose a time:</label>
+                <!-- Calendar input (basic HTML input type="date" used for simplicity) -->
+                <input type="date" id="appointment" name="appointment" min="2023-01-01" max="2024-12-31" required>
+
+                <label for="inquiry">Detailed Inquiry:</label>
+                <textarea id="inquiry" name="inquiry"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Slick Slider JavaScript -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</body>
+</html>
