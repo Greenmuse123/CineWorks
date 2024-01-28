@@ -4,15 +4,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     var iframe = document.querySelector('#aboutUsVideo iframe');
     var player = new Vimeo.Player(iframe);
 
-    // Slick Slider initialization
-    $('.portfolio-gallery').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true
-    });
-
     // Getting the button element
     const watchReelBtn = document.getElementById('watchReelBtn');
 
@@ -21,11 +12,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         watchReelBtn.style.display = 'none';
     });
 
-    // Event listeners for when the video is paused or ends
+    // Event listener for when the video is paused
     player.on('pause', function () {
         watchReelBtn.style.display = 'block';
     });
 
+    // Event listener for when the video ends
     player.on('ended', function () {
         watchReelBtn.style.display = 'block';
     });
@@ -47,6 +39,7 @@ function togglePlayFullScreen() {
         console.log(error);
     });
 }
+
 
 
 window.addEventListener('scroll', function () {
