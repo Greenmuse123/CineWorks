@@ -1,47 +1,53 @@
 
-
 document.addEventListener('DOMContentLoaded', (event) => {
-    const video = document.getElementById('aboutUsVideo');
-    const watchReelBtn = document.getElementById('watchReelBtn');
+    // Initialize the Vimeo Player
+    var iframe = document.querySelector('#aboutUsVideo iframe');
+    var player = new Vimeo.Player(iframe);
+
+    // Slick Slider initialization
     $('.portfolio-gallery').slick({
-        // Slick Slider options
         dots: true,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
         adaptiveHeight: true
     });
+
+    // Getting the button element
+    const watchReelBtn = document.getElementById('watchReelBtn');
+
     // Event listener for when the video starts playing
-    video.addEventListener('play', () => {
+    player.on('play', function () {
         watchReelBtn.style.display = 'none';
     });
 
     // Event listeners for when the video is paused or ends
-    video.addEventListener('pause', () => {
+    player.on('pause', function () {
         watchReelBtn.style.display = 'block';
     });
 
-    video.addEventListener('ended', () => {
+    player.on('ended', function () {
         watchReelBtn.style.display = 'block';
     });
 });
 
 // Function to handle the play/pause toggle and full screen
 function togglePlayFullScreen() {
-    const video = document.getElementById('aboutUsVideo');
-    if (video.paused || video.ended) {
-        video.play();
-        if (video.requestFullscreen) {
-            video.requestFullscreen();
-        } else if (video.webkitRequestFullscreen) { /* Safari */
-            video.webkitRequestFullscreen();
-        } else if (video.msRequestFullscreen) { /* IE11 */
-            video.msRequestFullscreen();
+    var iframe = document.querySelector('#aboutUsVideo iframe');
+    var player = new Vimeo.Player(iframe);
+
+    player.getPaused().then(function (paused) {
+        if (paused) {
+            player.play();
+        } else {
+            player.pause();
         }
-    } else {
-        video.pause();
-    }
+    }).catch(function (error) {
+        // Handle the error
+        console.log(error);
+    });
 }
+
 
 window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
@@ -102,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Add logic to send data to server here
     }
 });
- // Forces Nav bar to appear at all times in portfolio.html
+// Forces Nav bar to appear at all times in portfolio.html
 document.addEventListener("DOMContentLoaded", function () {
     var path = window.location.pathname;
     var page = path.split("/").pop();
@@ -143,7 +149,3 @@ function toggleMenu() {
         navLinks.style.display = "block";
     }
 }
-
-
-
-
