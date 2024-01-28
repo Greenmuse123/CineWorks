@@ -11,7 +11,7 @@
     <header>
         <nav class="navbar">
             <button class="hamburger" onclick="toggleMenu()">☰</button>
-            <a href="#home" class="logo"><img src="Images/Cineworks logo.png" alt="Logo"></a>
+            <a href="#home" class="logo"><img src="Images/Cineworks Logo.png" alt="Logo"></a>
             <ul class="nav-links">
                 <li><a href="portfolio.html">How We Work</a></li>
                 <li><a href="#contact" class="cta-button">Get Started</a></li>
@@ -20,29 +20,30 @@
     </header>
     <!-- Hero Section -->
     <section class="hero-section">
-        <video autoplay loop muted class="hero-video">
-            <source src="Videos/Cineworks Hero Reel.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="hero-video-container">
+            <iframe src="https://player.vimeo.com/video/901716300?h=d490e8dfaa&autoplay=1&muted=1&loop=1&controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="hero-content">
             <h1>On-Demand Video Production Company Worldwide</h1>
             <a href="#contact" class="cta-button">Get Started</a>
         </div>
     </section>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+
     <!-- About Us Section -->
     <section class="about-us">
         <div class="container">
             <h2>Cineworks sets the industry standard for performance video marketing.</h2>
-            <div class="video-container">
-                <video id="aboutUsVideo" width="640" height="360" controls poster="Images/thumbnail.png">
-                    <source src="Videos/Cineworks Hero Reel.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="video-container" id="aboutUsVideo" style="position: relative; padding-top: 36.25%;">
+                <iframe src="https://player.vimeo.com/video/901716300?h=d490e8dfaa&autoplay=0muted=0&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 <button id="watchReelBtn" onclick="togglePlayFullScreen()">Watch Reel</button>
             </div>
             <p>Cineworks offers on-demand video production services, from ideation to the final delivery, backed by our industry leading platform and methodology that's tailored to each project's needs.</p>
         </div>
     </section>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
     <!-- Get Started Call To Action -->
     <section class="get-started">
         <div class="container">
