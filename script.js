@@ -92,10 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("inquiryForm").onsubmit = function (event) {
         event.preventDefault();
         console.log("Name:", document.getElementById("name").value);
-        console.log("Number:", document.getElementById("number").value);
+        console.log("Phone:", document.getElementById("phone").value);
         console.log("Email:", document.getElementById("email").value);
-        console.log("Date:", document.getElementById("date").value);
-        console.log("Message:", document.getElementById("message").value);
+        console.log("Appointment:", document.getElementById("appointment").value);
+        console.log("Inquiry:", document.getElementById("inquiry").value);
         // Close the modal
         modal.style.display = "none";
         // Add logic to send data to server here
